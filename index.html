@@ -1,20 +1,25 @@
-<script type="text/javascript">
-  
-  var appInsights = window.appInsights || function (config) {
-    
-    function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Site Monitorado</title>
+  <script type="text/javascript">
+    var appInsights = window.appInsights || function (config) {
+      function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+      var t = { config: config }, u = document, e = window, o = "script", s = "InstrumentationKey", i = "trackPageView", 
+      a = "trackException", c = "trackEvent", l = "trackTrace", h = "trackDependency"; 
+      r(i); r(a); r(c); r(l); r(h); var d = u.createElement(o); d.src = "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; 
+      u.getElementsByTagName(o)[0].parentNode.appendChild(d); return t;
+    }({
+      instrumentationKey: "d5d7dc54-169f-41de-a2e5-dcef9e1b8857"
+    });
 
-    var t = { config: config }, u = document, e = window, o = "script", s = "InstrumentationKey", i = "trackPageView", 
-    
-    a = "trackException", c = "trackEvent", l = "trackTrace", h = "trackDependency"; 
-    
-    r(i); r(a); r(c); r(l); r(h); var d = u.createElement(o); d.src = "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; 
-    
-    u.getElementsByTagName(o)[0].parentNode.appendChild(d); return t;
-  }
-
-  ({instrumentationKey: "d5d7dc54-169f-41de-a2e5-dcef9e1b8857"});
-
-  window.appInsights = appInsights;
-  appInsights.trackPageView();
-</script>
+    window.appInsights = appInsights;
+    appInsights.trackPageView();
+  </script>
+</head>
+<body>
+  <h1>Monitorando com Application Insights</h1>
+  <p>Esse site foi configurado para enviar dados de acesso ao Azure.</p>
+</body>
+</html>
